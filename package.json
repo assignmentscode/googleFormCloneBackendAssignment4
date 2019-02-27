@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "migrationUp": "node_modules/.bin/sequelize db:migrate",
+    "migrationDown": "node_modules/.bin/sequelize db:migrate:undo:all",
+    "test": "NODE_ENV=test npm run migrationDown && NODE_ENV=test npm run migrationUp && jest"
   },
   "author": "",
   "license": "ISC",
@@ -15,6 +17,10 @@
     "jest": "^24.1.0"
   },
   "dependencies": {
-    "hapi": "^17.8.4"
+    "hapi": "^17.8.4",
+    "pg": "^7.8.1",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.42.1",
+    "sequelize-cli": "^5.4.0"
   }
 }

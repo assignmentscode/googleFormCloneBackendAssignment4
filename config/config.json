@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "Shashwat_Sinha",
+    "password": null,
+    "database": "googleFormClone",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "Shashwat_Sinha",
+    "password": null,
+    "database": "googleFormCloneTest",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "Shashwat_Sinha",
+    "password": null,
+    "database": "database_production",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
