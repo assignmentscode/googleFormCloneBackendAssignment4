@@ -30,7 +30,6 @@ describe('getAllColumnsByFormId ()', async () => {
   });
   it('should return the list of all form Names stored in database', async () => {
     await model.formElements.getAllColumnsByFormId(inputFormId).then((result) => {
-      console.log('reached');
       expect(result[0].columnName).toEqual(inputColumnName);
       expect(result.length).toEqual(1);
     });
