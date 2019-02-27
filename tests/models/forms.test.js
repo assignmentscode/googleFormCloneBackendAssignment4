@@ -11,7 +11,7 @@ describe('addNewFormName ()', () => {
   });
   it('should insert a formName into database', async () => {
     await model.forms.findAll({ where: { formName } }).then((result) => {
-      // console.log(result[0].dataValues.formName);
+      // console.log(result[0].dataValues.id);
       expect(result[0].dataValues.formName).toEqual(formName);
     });
   });
