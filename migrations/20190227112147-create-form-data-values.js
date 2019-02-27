@@ -1,5 +1,5 @@
 module.exports = {
-  up: (queryInterface, Sequelize) => queryInterface.createTable('formElements', {
+  up: (queryInterface, Sequelize) => queryInterface.createTable('formDataValues', {
     id: {
       allowNull: false,
       autoIncrement: true,
@@ -8,9 +8,11 @@ module.exports = {
     },
     formId: {
       type: Sequelize.INTEGER,
+      allowNull: false,
     },
-    columnName: {
-      type: Sequelize.STRING,
+    formData: {
+      type: Sequelize.JSON,
+      allowNull: false,
     },
     createdAt: {
       allowNull: false,
@@ -21,5 +23,5 @@ module.exports = {
       type: Sequelize.DATE,
     },
   }),
-  down: queryInterface => queryInterface.dropTable('formElements'),
+  down: queryInterface => queryInterface.dropTable('formDataValues'),
 };
