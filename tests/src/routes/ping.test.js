@@ -23,7 +23,7 @@ describe('Route /Ping', () => {
     const response = await server.inject(options);
     expect(response.statusCode).toEqual(404);
   });
-  it('should return "pong" as a response', async () => {
+  it('should return "Not Found" as a response', async () => {
     const response = await server.inject(options);
     expect(response.result.message).toEqual('Not Found');
   });
