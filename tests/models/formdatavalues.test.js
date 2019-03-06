@@ -22,9 +22,10 @@ describe('FormDataValues Table: ', () => {
     model.sequelize.close();
   });
   describe('insertFormData ()', () => {
-    it('should insert only 1 row of data into database for 1 form', async () => {
+    it('should insert only 1 row of data into database for 1 form', async (done) => {
       await model.formDataValues.insertFormData(inputFormId, data);
       expect(await model.formDataValues.count()).toEqual(1);
+      done();
     });
     it('should insert a row of data into database', async () => {
       await model.formDataValues.findAll({ where: { formId: inputFormId } }).then((result) => {
